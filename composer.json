@@ -1,8 +1,8 @@
 {
-  "name":"josegonzalez/cakephp-entity",
-  "description":"Use model objects/classes instead of arrays in your CakePHP application",
-  "type":"cakephp-plugin",
-  "keywords":[
+  "name": "isaocorp/cakephp-entity",
+  "description": "Use model objects/classes instead of arrays in your CakePHP application",
+  "type": "cakephp-plugin",
+  "keywords": [
     "cakephp",
     "entity",
     "objects",
@@ -10,28 +10,27 @@
     "model",
     "models"
   ],
-  "homepage":"https://github.com/josegonzalez/cakephp-entity",
-  "license":"MIT",
-  "authors":[
+  "homepage": "https://github.com/isaocorp/cakephp-entity",
+  "license": "MIT",
+  "authors": [
     {
-      "name": "Jose Diaz-Gonzalez",
-      "email": "email@josediazgonzalez.com",
-      "homepage": "http://josediazgonzalez.com",
+      "name": "ISAO Corp",
+      "homepage": "http://www.isao.co.jp",
       "role": "Maintainer"
     },
     {
-      "name":"Yosuke Basuke Suzuki",
-      "role":"Author",
-      "homepage":"http://basuke.com/"
+      "name": "Yosuke Basuke Suzuki",
+      "role": "Author",
+      "homepage": "http://basuke.com/"
     }
   ],
-  "support":{
-    "source":"https://github.com/josegonzalez/cakephp-entity",
-    "issues":"https://github.com/josegonzalez/cakephp-entity/issues"
+  "support": {
+    "source": "https://github.com/isaocorp/cakephp-entity",
+    "issues": "https://github.com/isaocorp/cakephp-entity/issues"
   },
-  "require":{
+  "require": {
     "php": ">=5.4",
-    "composer/installers":"*"
+    "composer/installers": "*"
   },
   "extra": {
     "installer-name": "Entity"
