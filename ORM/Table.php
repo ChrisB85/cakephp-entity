@@ -32,7 +32,11 @@ class Table extends AppModel {
 
 		if ($table === null) {
 			if ($this->name === null) {
-				$this->name = (isset($name) ? $name : get_class($this));
+			    if (isset($id['name'])){
+			        $this->alias = $this->name = Hash::get($id, 'name');
+                } else {
+                    $this->name = (isset($name) ? $name : get_class($this));
+                }
 			}
 
 			if ($this->alias === null) {
