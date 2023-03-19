@@ -247,7 +247,7 @@ class Entity implements ArrayAccess, JsonSerializable {
 
 			// HACK: Association support isn't implemented in 3.x
 			// so we implement it here...
-			if (ctype_upper($p[0]) && is_array($value)) {
+			if (is_string($p) && ctype_upper($p[0]) && is_array($value)) {
 				list($p, $value) = $this->_transformIntoEntity($p, $value);
 			} // ENDHACK
 
