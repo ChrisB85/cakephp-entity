@@ -87,7 +87,7 @@ class Entity implements ArrayAccess, JsonSerializable {
  *
  * ``$entity = new Entity(['id' => 1, 'name' => 'Andrew'])``
  *
- * @param array $properties hash of properties to set in this entity
+ * @param array|Entity $properties hash of properties to set in this entity
  * @param array $options list of options to use when creating this entity
  * the following list of options can be used:
  *
@@ -96,7 +96,11 @@ class Entity implements ArrayAccess, JsonSerializable {
  * - markNew: whether this instance has not yet been persisted
  * - guard: whether to prevent inaccessible properties from being set (default: false)
  */
-	public function __construct(array $properties = [], array $options = []) {
+	public function __construct($properties = [], array $options = []) {
+        if ($properties instanceof $this) {
+            $properties = $properties->toArray();
+        }
+
 		$options += [
 			'useSetters' => true,
 			'markClean' => false,
